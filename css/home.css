@@ -1,0 +1,114 @@
+html {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  font-size: 10px;
+  width: 120px;
+  height: 30px;
+  border: none;
+  text-align: center;
+}
+
+.btn_select {
+  background-image: linear-gradient(225deg, #228dc7, #00acc7);
+  color: #fff;
+}
+
+.Header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2) !important;
+}
+.Header .Header__logo {
+  padding-left: 15px;
+}
+.Header .Header__logo img {
+  width: 120px;
+}
+.Header nav.Header__navbar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.Header nav.Header__navbar ul li {
+  display: inline;
+  margin-right: 30px;
+}
+.Header nav.Header__navbar ul li a {
+  text-decoration: none;
+  color: #00acc7;
+  font-size: 14px;
+  font-weight: 400;
+}
+.Header nav.Header__navbar ul li a i.fa-caret-down {
+  font-size: 30px;
+  padding-right: 15px;
+  border-right: 1.5px solid #ebebf2;
+}
+.Header nav.Header__navbar ul li a i.fa-user-circle {
+  font-size: 22px;
+}
+
+.HomePageContent {
+  background-color: #fff;
+  width: 100%;
+}
+.HomePageContent .HomeControl {
+  width: 100%;
+  height: 450px;
+  background: url(/img/home-desktop-header.1b155c37.png) bottom/110% 110% no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.HomePageContent .HomeControl .HomeControl__board {
+  width: 700px;
+  display: flex;
+  background-color: #fff;
+}
+.HomePageContent .HomeControl .HomeControl__board .HomeIntroContainer {
+  color: #fff;
+  text-align: center;
+  width: 50%;
+  background: url(/img/DAPP_Background-blue.06141c5d.png) bottom/cover no-repeat;
+}
+.HomePageContent .HomeControl .HomeControl__board .HomeIntroContainer img {
+  width: 120px;
+  margin-top: 40px;
+}
+.HomePageContent .HomeControl .HomeControl__board .HomeIntroContainer p.HomeIntroContainer_title {
+  font-size: 22px;
+}
+.HomePageContent .HomeControl .HomeControl__board .HomeIntroContainer p.HomeIntroContainer_subtitle {
+  font-size: 16px;
+  font-weight: 300;
+  max-width: 220px;
+  margin: 20px auto 35px;
+}
+.HomePageContent .HomeControl .HomeControl__board .HomeSelectContainer {
+  width: 50%;
+  text-align: center;
+}
+.HomePageContent .HomeControl .HomeControl__board .HomeSelectContainer p.HomeSelectContainer_title {
+  color: #00acc7;
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 78px;
+}
+.HomePageContent .HomeControl .HomeControl__board .HomeSelectContainer .HomeSelectContainer_btnContainer button {
+  margin: 15px 15px 0;
+}

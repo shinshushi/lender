@@ -1,0 +1,10 @@
+@mixin resetPdMg {
+    padding: 0;
+    margin: 0;
+}
+
+@mixin displayFlex($justify-content, $align-items){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
