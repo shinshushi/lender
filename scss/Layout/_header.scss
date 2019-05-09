@@ -3,6 +3,9 @@
     @include displayFlex(space-between, center);
     height: 50px;
     box-shadow: 0 3px 6px rgba(0,0,0,.2)!important;
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
     .Header__logo{
         cursor: pointer;
         padding-left: 15px;
