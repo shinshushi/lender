@@ -4,6 +4,7 @@
     height: 50px;
     box-shadow: 0 3px 6px rgba(0,0,0,.2)!important;
     .Header__logo{
+        cursor: pointer;
         padding-left: 15px;
         img{
             width: $width-logo;
@@ -11,21 +12,20 @@
     }
     nav.Header__navbar{
         ul{
-            @include resetPdMg;
-            list-style: none;
             @include displayFlex(flex-end, center);
             li{
                 display: inline;
                 margin-right: 30px;
                 a{
+                    cursor: pointer;
                     text-decoration: none;
-                    color: $color-text;
-                    font-size: $font-size-4;
-                    font-weight: 400;
+                    color: $color-blue-100;
+                    @include setFont($font-size-4, 400);
                     i.fa-caret-down{
                         font-size: $font-size-9;
                         padding-right: 15px;
                         border-right: 1.5px solid $color-seperator;
+                        @include hoverEffect;
                     }
                     i.fa-user-circle{
                         font-size: $font-size-8;

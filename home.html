@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,11 @@
     <title>ETHLend</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- swiper library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
     <link rel="stylesheet" href="./css/home.css">
 </head>
+
 <body>
     <header class="Header">
         <div class="Header__logo">
@@ -35,7 +39,7 @@
                     <a href="#"><i class="fa fa-caret-down"></i></a>
                 </li>
                 <li>
-                    <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAB4klEQVR4Ae2YM9hcURRFd8wqaWJ1qWPbbGLbTpoYTWz23T0vdjXVnBvbtm3f7G/mt8cTFOsZ6+ARHaZ2jQgYLQVPZ0H0GXkMsZ3COk74AheKQ/wTIPoUnnVpiD7HgWslYi4C44pQYDjEPsgkkC7yC9u1Y8xE4FxhCvSjwPXsJ7fnyDIY2xfbT1QMlIslIuspdi1F8DWXV45IBJ6/J0QvZoj6A9kNo2NSD44dtjaXTeP8YY6/5JKtzWGJQI60h+jplINcI2sDy9gfpCyne3DdFi6/x7HLF9HbIYtAbAOyEEYnwRypmalJvSOteOA54PqQYdlCEIk/YHSDaPopJX1xRM9y3CddhN0cf4kURJ+mi3BBQmHPJYeIz1fyHxH5LyL6g+PV8LQbxLYsMM4Vip6I6C8KtA0+l47VKrDEDm0Bo+WiJ2J0b8pjYUMYQfwkS6JUGl2MnbZG+Bm1L6PVI9MhR+tmifRqIEOiLwp0jCiVZmo2Ec4He8YOjZ+I6LTsIv7Gwb7R3nEU8c/MLqK3U0rzOI4idlFkzarPEbV3C5+vKIweCOtGaHRkNO+s28K6oe04Wj76zxrRG2RzaO+wrkhyPvT+ixgt9f+dNRMpfw4A0bcJkxB9l+UDS78nQOIzjB2WKvIb05eI8ih9oRIAAAAASUVORK5CYII=" alt="" style="width: 24px;"></a>
+                    <a href="#"><img src="./img/wallet-icon.png" alt="" style="width: 24px;"></a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-user-circle"></i></a>
@@ -51,7 +55,8 @@
                 <div class="HomeIntroContainer">
                     <img src="./img/ETHLendLogo_white.aca13022.svg" alt="">
                     <p class="HomeIntroContainer_title">The future of lending</p>
-                    <p class="HomeIntroContainer_subtitle">Want to know more before you start? Make sure to check our FAQ</p>
+                    <p class="HomeIntroContainer_subtitle">Want to know more before you start? Make sure to check our
+                        FAQ</p>
                 </div>
                 <div class="HomeSelectContainer">
                     <p class="HomeSelectContainer_title">Do you want to...</p>
@@ -62,6 +67,774 @@
                 </div>
             </div>
         </section>
+
+        <!-- Latest Loan Requests -->
+        <section id="latestLoanRequests" class="LatestLoanContainer">
+            <div class="LatestLoanHeader">
+                <h1 class="LatestLoanHeader__title">Latest loan requests</h1>
+                <div class="LatestLoanHeader__right">
+                    <div class="arrow-container">
+                        <button class="btn_arrow prev"><i class="fa fa-angle-left"></i></button>
+                        <button class="btn_arrow next"><i class="fa fa-angle-right"></i></button>
+                    </div>
+                    <button class="btn btn_viewall">view all</button>
+                </div>
+            </div>
+            <div class="LatestLoanDevider"></div>
+            <div class="LatestLoanSlider">
+                <!-- Swiper -->
+                <div class="swiper-container requests">
+                    <div class="swiper-wrapper">
+                        <div class="LoanInfoCard__wrapper swiper-slide">
+                            <div class="LoanInfoCard">
+                                <div class="LoanInfo__header">
+                                    <div class="LoanInfo__Header-item">
+                                        <img src="./img/currency-icon-green.png" alt="">
+                                        <p class="loanamount-label">Loan amount</p>
+                                        <p>8,598.09 ETHUSD</p>
+                                    </div>
+                                    <div class="LoanInfo__Header-item">
+                                        <img src="./img/purple-paper-icon.png" alt="">
+                                        <p class="loanamount-label">Collateral</p>
+                                        <p>230,000 SCRL</p>
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Body">
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Earnings</span>
+                                        <span>12.35%</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Duration</span>
+                                        <span>210 Days</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Safeness</span>
+                                        <span>NEUTRAL</span>
+                                    </p>
+                                </div>
+                                <div class="LoanInfo__Footer waitingforpayback">
+                                    <p class="LoanInfo__Footer-text">Waiting for Payback</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="LoanInfoCard__wrapper swiper-slide">
+                            <div class="LoanInfoCard">
+                                <div class="LoanInfo__header">
+                                    <div class="LoanInfo__Header-item">
+                                        <img src="./img/currency-icon-green.png" alt="">
+                                        <p class="loanamount-label">Loan amount</p>
+                                        <p>8,598.09 ETHUSD</p>
+                                    </div>
+                                    <div class="LoanInfo__Header-item">
+                                        <img src="./img/purple-paper-icon.png" alt="">
+                                        <p class="loanamount-label">Collateral</p>
+                                        <p>230,000 SCRL</p>
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Body">
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Earnings</span>
+                                        <span>12.35%</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Duration</span>
+                                        <span>210 Days</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Safeness</span>
+                                        <span>NEUTRAL</span>
+                                    </p>
+                                </div>
+                                <div class="LoanInfo__Footer waitingforlender">
+                                    <p class="LoanInfo__Footer-text">Waiting for lender(s)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="LoanInfoCard__wrapper swiper-slide">
+                            <div class="LoanInfoCard">
+                                <div class="LoanInfo__header">
+                                    <div class="LoanInfo__Header-item">
+                                        <img src="./img/currency-icon-green.png" alt="">
+                                        <p class="loanamount-label">Loan amount</p>
+                                        <p>8,598.09 ETHUSD</p>
+                                    </div>
+                                    <div class="LoanInfo__Header-item">
+                                        <img src="./img/purple-paper-icon.png" alt="">
+                                        <p class="loanamount-label">Collateral</p>
+                                        <p>230,000 SCRL</p>
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Body">
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Earnings</span>
+                                        <span>12.35%</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Duration</span>
+                                        <span>210 Days</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Safeness</span>
+                                        <span>NEUTRAL</span>
+                                    </p>
+                                </div>
+                                <div class="LoanInfo__Footer waitingforpayback">
+                                    <p class="LoanInfo__Footer-text">Waiting for Payback</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="LoanInfoCard__wrapper swiper-slide">
+                            <div class="LoanInfoCard">
+                                <div class="LoanInfo__header">
+                                    <div class="LoanInfo__Header-item">
+                                        <img src="./img/currency-icon-green.png" alt="">
+                                        <p class="loanamount-label">Loan amount</p>
+                                        <p>8,598.09 ETHUSD</p>
+                                    </div>
+                                    <div class="LoanInfo__Header-item">
+                                        <img src="./img/purple-paper-icon.png" alt="">
+                                        <p class="loanamount-label">Collateral</p>
+                                        <p>230,000 SCRL</p>
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Body">
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Earnings</span>
+                                        <span>12.35%</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Duration</span>
+                                        <span>210 Days</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Safeness</span>
+                                        <span>NEUTRAL</span>
+                                    </p>
+                                </div>
+                                <div class="LoanInfo__Footer waitingforpayback">
+                                    <p class="LoanInfo__Footer-text">Waiting for Payback</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="LoanInfoCard__wrapper swiper-slide">
+                            <div class="LoanInfoCard">
+                                <div class="LoanInfo__header">
+                                    <div class="LoanInfo__Header-item">
+                                        <img src="./img/currency-icon-green.png" alt="">
+                                        <p class="loanamount-label">Loan amount</p>
+                                        <p>8,598.09 ETHUSD</p>
+                                    </div>
+                                    <div class="LoanInfo__Header-item">
+                                        <img src="./img/purple-paper-icon.png" alt="">
+                                        <p class="loanamount-label">Collateral</p>
+                                        <p>230,000 SCRL</p>
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Body">
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Earnings</span>
+                                        <span>12.35%</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Duration</span>
+                                        <span>210 Days</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Safeness</span>
+                                        <span>NEUTRAL</span>
+                                    </p>
+                                </div>
+                                <div class="LoanInfo__Footer waitingforpayback">
+                                    <p class="LoanInfo__Footer-text">Waiting for Payback</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="LoanInfoCard__wrapper swiper-slide">
+                            <div class="LoanInfoCard">
+                                <div class="LoanInfo__header">
+                                    <div class="LoanInfo__Header-item">
+                                        <img src="./img/currency-icon-green.png" alt="">
+                                        <p class="loanamount-label">Loan amount</p>
+                                        <p>8,598.09 ETHUSD</p>
+                                    </div>
+                                    <div class="LoanInfo__Header-item">
+                                        <img src="./img/purple-paper-icon.png" alt="">
+                                        <p class="loanamount-label">Collateral</p>
+                                        <p>230,000 SCRL</p>
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Body">
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Earnings</span>
+                                        <span>12.35%</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Duration</span>
+                                        <span>210 Days</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Safeness</span>
+                                        <span>NEUTRAL</span>
+                                    </p>
+                                </div>
+                                <div class="LoanInfo__Footer waitingforpayback">
+                                    <p class="LoanInfo__Footer-text">Waiting for Payback</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="LoanInfoCard__wrapper swiper-slide">
+                            <div class="LoanInfoCard">
+                                <div class="LoanInfo__header">
+                                    <div class="LoanInfo__Header-item">
+                                        <img src="./img/currency-icon-green.png" alt="">
+                                        <p class="loanamount-label">Loan amount</p>
+                                        <p>8,598.09 ETHUSD</p>
+                                    </div>
+                                    <div class="LoanInfo__Header-item">
+                                        <img src="./img/purple-paper-icon.png" alt="">
+                                        <p class="loanamount-label">Collateral</p>
+                                        <p>230,000 SCRL</p>
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Body">
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Earnings</span>
+                                        <span>12.35%</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Duration</span>
+                                        <span>210 Days</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Safeness</span>
+                                        <span>NEUTRAL</span>
+                                    </p>
+                                </div>
+                                <div class="LoanInfo__Footer waitingforpayback">
+                                    <p class="LoanInfo__Footer-text">Waiting for Payback</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Add Arrows -->
+                    <!-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Loan Offers -->
+        <section id="latestLoanOffers" class="LatestLoanContainer">
+            <div class="LatestLoanHeader">
+                <h1 class="LatestLoanHeader__title">Latest loan offers</h1>
+                <div class="LatestLoanHeader__right">
+                    <div class="arrow-container">
+                        <button class="btn_arrow prev"><i class="fa fa-angle-left"></i></button>
+                        <button class="btn_arrow next"><i class="fa fa-angle-right"></i></button>
+                    </div>
+                    <button class="btn btn_viewall">view all</button>
+                </div>
+            </div>
+            <div class="LatestLoanDevider"></div>
+            <div class="LatestLoanSlider">
+                <!-- Swiper -->
+                <div class="swiper-container offers">
+                    <div class="swiper-wrapper">
+                        <div class="LoanInfoCard__wrapper swiper-slide">
+                            <div class="LoanInfoCard">
+                                <div class="OfferCard__header">
+                                    <div class="OfferCard__tokens OfferCard__row">
+                                        <ul>
+                                            <li></li>
+                                            <li><img src="./img/icon-1.png" alt=""></li>
+                                            <li><img src="./img/icon-2.png" alt=""></li>
+                                            <li><img src="./img/icon-3.png" alt=""></li>
+                                            <li><img src="./img/icon-4.png" alt=""></li>
+                                            <li><img src="./img/icon-5.png" alt=""></li>
+                                        </ul>
+                                    </div>
+                                    <div class="OfferCard__divider"></div>
+                                    <div class="OfferCard__info OfferCard__row">
+                                        <ul>
+                                            <li>MPR</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                        </ul>
+                                    </div>
+                                    <div class="OfferCard__info OfferCard__row">
+                                        <ul>
+                                            <li>LTV</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Body OfferCard__body">
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Duration</span>
+                                        <span>120 Days</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Loan Amount</span>
+                                        <span>1134.8 USDC</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Collateral Amount</span>
+                                        <span>13.5413 ETH</span>
+                                    </p>
+                                    <div class="OfferCard__action">
+                                        <img src="./img/icon-6.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Footer waitingforpayback">
+                                    <p class="LoanInfo__Footer-text">Waiting for Payback</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="LoanInfoCard__wrapper swiper-slide">
+                            <div class="LoanInfoCard">
+                                <div class="OfferCard__header">
+                                    <div class="OfferCard__tokens OfferCard__row">
+                                        <ul>
+                                            <li></li>
+                                            <li><img src="./img/icon-1.png" alt=""></li>
+                                            <li><img src="./img/icon-2.png" alt=""></li>
+                                            <li><img src="./img/icon-3.png" alt=""></li>
+                                            <li><img src="./img/icon-4.png" alt=""></li>
+                                            <li><img src="./img/icon-5.png" alt=""></li>
+                                        </ul>
+                                    </div>
+                                    <div class="OfferCard__divider"></div>
+                                    <div class="OfferCard__info OfferCard__row">
+                                        <ul>
+                                            <li>MPR</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                        </ul>
+                                    </div>
+                                    <div class="OfferCard__info OfferCard__row">
+                                        <ul>
+                                            <li>LTV</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Body OfferCard__body">
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Duration</span>
+                                        <span>120 Days</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Loan Amount</span>
+                                        <span>1134.8 USDC</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Collateral Amount</span>
+                                        <span>13.5413 ETH</span>
+                                    </p>
+                                    <div class="OfferCard__action">
+                                        <img src="./img/icon-6.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Footer waitingforpayback">
+                                    <p class="LoanInfo__Footer-text">Waiting for Payback</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="LoanInfoCard__wrapper swiper-slide">
+                            <div class="LoanInfoCard">
+                                <div class="OfferCard__header">
+                                    <div class="OfferCard__tokens OfferCard__row">
+                                        <ul>
+                                            <li></li>
+                                            <li><img src="./img/icon-1.png" alt=""></li>
+                                            <li><img src="./img/icon-2.png" alt=""></li>
+                                            <li><img src="./img/icon-3.png" alt=""></li>
+                                            <li><img src="./img/icon-4.png" alt=""></li>
+                                            <li><img src="./img/icon-5.png" alt=""></li>
+                                        </ul>
+                                    </div>
+                                    <div class="OfferCard__divider"></div>
+                                    <div class="OfferCard__info OfferCard__row">
+                                        <ul>
+                                            <li>MPR</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                        </ul>
+                                    </div>
+                                    <div class="OfferCard__info OfferCard__row">
+                                        <ul>
+                                            <li>LTV</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Body OfferCard__body">
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Duration</span>
+                                        <span>120 Days</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Loan Amount</span>
+                                        <span>1134.8 USDC</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Collateral Amount</span>
+                                        <span>13.5413 ETH</span>
+                                    </p>
+                                    <div class="OfferCard__action">
+                                        <img src="./img/icon-6.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Footer waitingforpayback">
+                                    <p class="LoanInfo__Footer-text">Waiting for Payback</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="LoanInfoCard__wrapper swiper-slide">
+                            <div class="LoanInfoCard">
+                                <div class="OfferCard__header">
+                                    <div class="OfferCard__tokens OfferCard__row">
+                                        <ul>
+                                            <li></li>
+                                            <li><img src="./img/icon-1.png" alt=""></li>
+                                            <li><img src="./img/icon-2.png" alt=""></li>
+                                            <li><img src="./img/icon-3.png" alt=""></li>
+                                            <li><img src="./img/icon-4.png" alt=""></li>
+                                            <li><img src="./img/icon-5.png" alt=""></li>
+                                        </ul>
+                                    </div>
+                                    <div class="OfferCard__divider"></div>
+                                    <div class="OfferCard__info OfferCard__row">
+                                        <ul>
+                                            <li>MPR</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                        </ul>
+                                    </div>
+                                    <div class="OfferCard__info OfferCard__row">
+                                        <ul>
+                                            <li>LTV</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Body OfferCard__body">
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Duration</span>
+                                        <span>120 Days</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Loan Amount</span>
+                                        <span>1134.8 USDC</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Collateral Amount</span>
+                                        <span>13.5413 ETH</span>
+                                    </p>
+                                    <div class="OfferCard__action">
+                                        <img src="./img/icon-6.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Footer waitingforpayback">
+                                    <p class="LoanInfo__Footer-text">Waiting for Payback</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="LoanInfoCard__wrapper swiper-slide">
+                            <div class="LoanInfoCard">
+                                <div class="OfferCard__header">
+                                    <div class="OfferCard__tokens OfferCard__row">
+                                        <ul>
+                                            <li></li>
+                                            <li><img src="./img/icon-1.png" alt=""></li>
+                                            <li><img src="./img/icon-2.png" alt=""></li>
+                                            <li><img src="./img/icon-3.png" alt=""></li>
+                                            <li><img src="./img/icon-4.png" alt=""></li>
+                                            <li><img src="./img/icon-5.png" alt=""></li>
+                                        </ul>
+                                    </div>
+                                    <div class="OfferCard__divider"></div>
+                                    <div class="OfferCard__info OfferCard__row">
+                                        <ul>
+                                            <li>MPR</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                        </ul>
+                                    </div>
+                                    <div class="OfferCard__info OfferCard__row">
+                                        <ul>
+                                            <li>LTV</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Body OfferCard__body">
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Duration</span>
+                                        <span>120 Days</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Loan Amount</span>
+                                        <span>1134.8 USDC</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Collateral Amount</span>
+                                        <span>13.5413 ETH</span>
+                                    </p>
+                                    <div class="OfferCard__action">
+                                        <img src="./img/icon-6.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Footer waitingforpayback">
+                                    <p class="LoanInfo__Footer-text">Waiting for Payback</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="LoanInfoCard__wrapper swiper-slide">
+                            <div class="LoanInfoCard">
+                                <div class="OfferCard__header">
+                                    <div class="OfferCard__tokens OfferCard__row">
+                                        <ul>
+                                            <li></li>
+                                            <li><img src="./img/icon-1.png" alt=""></li>
+                                            <li><img src="./img/icon-2.png" alt=""></li>
+                                            <li><img src="./img/icon-3.png" alt=""></li>
+                                            <li><img src="./img/icon-4.png" alt=""></li>
+                                            <li><img src="./img/icon-5.png" alt=""></li>
+                                        </ul>
+                                    </div>
+                                    <div class="OfferCard__divider"></div>
+                                    <div class="OfferCard__info OfferCard__row">
+                                        <ul>
+                                            <li>MPR</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                        </ul>
+                                    </div>
+                                    <div class="OfferCard__info OfferCard__row">
+                                        <ul>
+                                            <li>LTV</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Body OfferCard__body">
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Duration</span>
+                                        <span>120 Days</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Loan Amount</span>
+                                        <span>1134.8 USDC</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Collateral Amount</span>
+                                        <span>13.5413 ETH</span>
+                                    </p>
+                                    <div class="OfferCard__action">
+                                        <img src="./img/icon-6.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Footer waitingforpayback">
+                                    <p class="LoanInfo__Footer-text">Waiting for Payback</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="LoanInfoCard__wrapper swiper-slide">
+                            <div class="LoanInfoCard">
+                                <div class="OfferCard__header">
+                                    <div class="OfferCard__tokens OfferCard__row">
+                                        <ul>
+                                            <li></li>
+                                            <li><img src="./img/icon-1.png" alt=""></li>
+                                            <li><img src="./img/icon-2.png" alt=""></li>
+                                            <li><img src="./img/icon-3.png" alt=""></li>
+                                            <li><img src="./img/icon-4.png" alt=""></li>
+                                            <li><img src="./img/icon-5.png" alt=""></li>
+                                        </ul>
+                                    </div>
+                                    <div class="OfferCard__divider"></div>
+                                    <div class="OfferCard__info OfferCard__row">
+                                        <ul>
+                                            <li>MPR</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                        </ul>
+                                    </div>
+                                    <div class="OfferCard__info OfferCard__row">
+                                        <ul>
+                                            <li>LTV</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Body OfferCard__body">
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Duration</span>
+                                        <span>120 Days</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Loan Amount</span>
+                                        <span>1134.8 USDC</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Collateral Amount</span>
+                                        <span>13.5413 ETH</span>
+                                    </p>
+                                    <div class="OfferCard__action">
+                                        <img src="./img/icon-6.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Footer waitingforpayback">
+                                    <p class="LoanInfo__Footer-text">Waiting for Payback</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="LoanInfoCard__wrapper swiper-slide">
+                            <div class="LoanInfoCard">
+                                <div class="OfferCard__header">
+                                    <div class="OfferCard__tokens OfferCard__row">
+                                        <ul>
+                                            <li></li>
+                                            <li><img src="./img/icon-1.png" alt=""></li>
+                                            <li><img src="./img/icon-2.png" alt=""></li>
+                                            <li><img src="./img/icon-3.png" alt=""></li>
+                                            <li><img src="./img/icon-4.png" alt=""></li>
+                                            <li><img src="./img/icon-5.png" alt=""></li>
+                                        </ul>
+                                    </div>
+                                    <div class="OfferCard__divider"></div>
+                                    <div class="OfferCard__info OfferCard__row">
+                                        <ul>
+                                            <li>MPR</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                            <li>1%</li>
+                                        </ul>
+                                    </div>
+                                    <div class="OfferCard__info OfferCard__row">
+                                        <ul>
+                                            <li>LTV</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                            <li>50%</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Body OfferCard__body">
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Duration</span>
+                                        <span>120 Days</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Loan Amount</span>
+                                        <span>1134.8 USDC</span>
+                                    </p>
+                                    <p class="LoanInfo__Detail-row">
+                                        <span>Collateral Amount</span>
+                                        <span>13.5413 ETH</span>
+                                    </p>
+                                    <div class="OfferCard__action">
+                                        <img src="./img/icon-6.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="LoanInfo__Footer waitingforpayback">
+                                    <p class="LoanInfo__Footer-text">Waiting for Payback</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+
+    <!-- swiper library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('#latestLoanRequests .swiper-container', {
+            slidesPerView: 6,
+            spaceBetween: 25,
+            loop: true,
+            slidesPerGroup: 6,
+            loopFillGroupWithBlank: false,
+            navigation: {
+                nextEl: '#latestLoanRequests .next',
+                prevEl: '#latestLoanRequests .prev',
+            },
+        });
+
+        var swiper = new Swiper('#latestLoanOffers .swiper-container', {
+            slidesPerView: 6,
+            spaceBetween: 25,
+            loop: true,
+            slidesPerGroup: 6,
+            loopFillGroupWithBlank: false,
+            navigation: {
+                nextEl: '#latestLoanOffers .next',
+                prevEl: '#latestLoanOffers .prev',
+            },
+        });
+
+    </script>
 </body>
+
 </html>

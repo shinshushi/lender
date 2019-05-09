@@ -4,47 +4,89 @@
     .HomeControl{
         width: 100%;
         height: 450px;
-        background: url(/img/home-desktop-header.1b155c37.png) bottom/110% 110% no-repeat ;
+        background: url('./../img/home-desktop-header.1b155c37.png') bottom/110% 110% no-repeat ;
         @include displayFlex(center, center);
         .HomeControl__board{
             width: 700px;
             display: flex;
             background-color: $color-white;
+            box-shadow: 0 0 20px 0 rgba(0,0,0,.2);
+            border-radius: 5px;
             .HomeIntroContainer{
                 color: $color-white;
                 text-align: center;
                 width: 50%;
-                background: url(/img/DAPP_Background-blue.06141c5d.png) bottom/cover no-repeat;
+                background: url('./../img/DAPP_Background-blue.06141c5d.png') bottom/cover no-repeat;
                 img{
                     width: 120px;
                     margin-top: 40px;
                 }
                 p.HomeIntroContainer_title{
                     font-size: $font-size-8;
+                    margin-top: 30px;
                 }
                 p.HomeIntroContainer_subtitle{
-                    font-size: $font-size-5;
-                    font-weight: 300;
+                    @include setFont($font-size-5, 300);
                     max-width: 220px;
                     margin: 20px auto 35px;
+                    line-height: 20px;
                 }
             }
             .HomeSelectContainer{
                 width: 50%;
                 text-align: center;
                 p.HomeSelectContainer_title{
-                    color: $color-text;
-                    font-size: $font-size-6;
-                    font-weight: 300;
+                    color: $color-blue-100;
+                    @include setFont($font-size-6, 300);
                     margin-top: 78px;
 
                 }
                 .HomeSelectContainer_btnContainer{
                     button{
-                        margin: 15px 15px 0;
+                        margin: 30px 15px 0;
                     }
                 }
             }
         }
     }
+}
+
+.LatestLoanContainer{
+    width: 95%;
+    margin: 50px auto 0px;
+    .LatestLoanHeader{
+        .LatestLoanHeader__title{
+            @include setFont($font-size-6, 400);
+            color: $color-blue-100;
+        }
+        @include displayFlex(space-between, center);
+        .LatestLoanHeader__right{
+            @include displayFlex(space-between, center);
+            .arrow-container{
+                margin-right: 15px;
+                button{
+                    margin: 0 3px;
+                }
+                .swiper-button-next, .swiper-button-prev {
+                    background-image: initial;
+                    position: initial;
+                    width: initial;
+                    height: initial;
+                }
+            }
+        }
+    }
+    .LatestLoanDevider{
+        background-color: $color-blue-100;
+        width: 100%;
+        height: 1px;
+        margin: 15px 0 25px;
+    }
+    .LatestLoanSlider{
+        
+    }
+}
+.LatestLoanContainer:nth-child(3){
+    margin-top: 30px;
+    margin-bottom: 50px;
 }

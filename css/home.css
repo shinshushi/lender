@@ -1,13 +1,18 @@
 html {
   font-family: 'Lato', sans-serif;
-  font-size: 16px;
-}
+  font-size: 16px; }
 
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6, p, span, ul, li, a, div, section {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style: none; }
 
 .btn {
   font-size: 10px;
@@ -15,12 +20,119 @@ body {
   height: 30px;
   border: none;
   text-align: center;
-}
+  text-transform: uppercase;
+  background-color: #fff;
+  cursor: pointer; }
+  .btn:hover {
+    opacity: 0.8; }
 
 .btn_select {
   background-image: linear-gradient(225deg, #228dc7, #00acc7);
-  color: #fff;
-}
+  color: #fff; }
+
+.btn_arrow {
+  background-color: #00acc7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 25px;
+  padding: 0 10px;
+  cursor: pointer; }
+  .btn_arrow:hover {
+    opacity: 0.8; }
+
+.btn_viewall {
+  border: 1px solid #00acc7;
+  color: #00acc7; }
+
+.LoanInfoCard {
+  height: 255px !important;
+  position: relative;
+  background-image: linear-gradient(0deg, #228dc7, #00acc7);
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  margin: 10px; }
+  .LoanInfoCard:hover {
+    opacity: 0.8; }
+  .LoanInfoCard .LoanInfo__header {
+    background-color: #fff;
+    display: flex; }
+    .LoanInfoCard .LoanInfo__header .LoanInfo__Header-item {
+      width: 50%;
+      text-align: center;
+      margin: 10px 0 25px; }
+      .LoanInfoCard .LoanInfo__header .LoanInfo__Header-item img {
+        width: 30px;
+        height: 30px; }
+      .LoanInfoCard .LoanInfo__header .LoanInfo__Header-item p {
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        font-weight: 600;
+        color: #707070;
+        margin-top: 5px; }
+      .LoanInfoCard .LoanInfo__header .LoanInfo__Header-item p.loanamount-label {
+        font-size: 12px;
+        font-weight: 400;
+        color: #00acc7;
+        margin-top: 3px; }
+    .LoanInfoCard .LoanInfo__header .LoanInfo__Header-item:first-child {
+      border-right: 1px solid #ebebf2; }
+  .LoanInfoCard .OfferCard__header {
+    padding-top: 10px;
+    background-color: #fff; }
+    .LoanInfoCard .OfferCard__header .OfferCard__tokens ul li img {
+      width: 20px;
+      height: 20px; }
+    .LoanInfoCard .OfferCard__header .OfferCard__divider {
+      width: 100%;
+      height: 1px;
+      background-color: #f8f8f8; }
+    .LoanInfoCard .OfferCard__header .OfferCard__row {
+      padding: 5px 10px 8px 25px; }
+      .LoanInfoCard .OfferCard__header .OfferCard__row ul {
+        display: flex;
+        justify-content: flex-end; }
+        .LoanInfoCard .OfferCard__header .OfferCard__row ul li {
+          width: 16.6666666667%; }
+    .LoanInfoCard .OfferCard__header .OfferCard__info ul li {
+      color: #707070;
+      font-size: 10px;
+      font-weight: 400; }
+    .LoanInfoCard .OfferCard__header .OfferCard__info ul li:first-child {
+      color: #00acc7;
+      text-transform: uppercase; }
+  .LoanInfoCard .LoanInfo__Body {
+    padding: 35px 30px 0 20px; }
+    .LoanInfoCard .LoanInfo__Body .LoanInfo__Detail-row {
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 20px; }
+  .LoanInfoCard .OfferCard__body {
+    padding-top: 15px; }
+    .LoanInfoCard .OfferCard__body .OfferCard__action {
+      margin-top: 20px; }
+      .LoanInfoCard .OfferCard__body .OfferCard__action img {
+        width: 30px;
+        height: 30px; }
+  .LoanInfoCard .LoanInfo__Footer {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%; }
+    .LoanInfoCard .LoanInfo__Footer .LoanInfo__Footer-text {
+      font-size: 13px;
+      font-weight: 300;
+      text-align: center;
+      line-height: 20px; }
+  .LoanInfoCard .waitingforpayback {
+    background: linear-gradient(#fc9b00, #e38b00); }
+  .LoanInfoCard .waitingforlender {
+    background: linear-gradient(#42db5f, #2dd74d); }
 
 .Header {
   background-color: #fff;
@@ -28,87 +140,108 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2) !important;
-}
-.Header .Header__logo {
-  padding-left: 15px;
-}
-.Header .Header__logo img {
-  width: 120px;
-}
-.Header nav.Header__navbar ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.Header nav.Header__navbar ul li {
-  display: inline;
-  margin-right: 30px;
-}
-.Header nav.Header__navbar ul li a {
-  text-decoration: none;
-  color: #00acc7;
-  font-size: 14px;
-  font-weight: 400;
-}
-.Header nav.Header__navbar ul li a i.fa-caret-down {
-  font-size: 30px;
-  padding-right: 15px;
-  border-right: 1.5px solid #ebebf2;
-}
-.Header nav.Header__navbar ul li a i.fa-user-circle {
-  font-size: 22px;
-}
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2) !important; }
+  .Header .Header__logo {
+    cursor: pointer;
+    padding-left: 15px; }
+    .Header .Header__logo img {
+      width: 120px; }
+  .Header nav.Header__navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    .Header nav.Header__navbar ul li {
+      display: inline;
+      margin-right: 30px; }
+      .Header nav.Header__navbar ul li a {
+        cursor: pointer;
+        text-decoration: none;
+        color: #00acc7;
+        font-size: 14px;
+        font-weight: 400; }
+        .Header nav.Header__navbar ul li a i.fa-caret-down {
+          font-size: 30px;
+          padding-right: 15px;
+          border-right: 1.5px solid #ebebf2; }
+          .Header nav.Header__navbar ul li a i.fa-caret-down:hover {
+            opacity: 0.8; }
+        .Header nav.Header__navbar ul li a i.fa-user-circle {
+          font-size: 22px; }
 
 .HomePageContent {
   background-color: #fff;
-  width: 100%;
-}
-.HomePageContent .HomeControl {
-  width: 100%;
-  height: 450px;
-  background: url(/img/home-desktop-header.1b155c37.png) bottom/110% 110% no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.HomePageContent .HomeControl .HomeControl__board {
-  width: 700px;
-  display: flex;
-  background-color: #fff;
-}
-.HomePageContent .HomeControl .HomeControl__board .HomeIntroContainer {
-  color: #fff;
-  text-align: center;
-  width: 50%;
-  background: url(/img/DAPP_Background-blue.06141c5d.png) bottom/cover no-repeat;
-}
-.HomePageContent .HomeControl .HomeControl__board .HomeIntroContainer img {
-  width: 120px;
-  margin-top: 40px;
-}
-.HomePageContent .HomeControl .HomeControl__board .HomeIntroContainer p.HomeIntroContainer_title {
-  font-size: 22px;
-}
-.HomePageContent .HomeControl .HomeControl__board .HomeIntroContainer p.HomeIntroContainer_subtitle {
-  font-size: 16px;
-  font-weight: 300;
-  max-width: 220px;
-  margin: 20px auto 35px;
-}
-.HomePageContent .HomeControl .HomeControl__board .HomeSelectContainer {
-  width: 50%;
-  text-align: center;
-}
-.HomePageContent .HomeControl .HomeControl__board .HomeSelectContainer p.HomeSelectContainer_title {
-  color: #00acc7;
-  font-size: 20px;
-  font-weight: 300;
-  margin-top: 78px;
-}
-.HomePageContent .HomeControl .HomeControl__board .HomeSelectContainer .HomeSelectContainer_btnContainer button {
-  margin: 15px 15px 0;
-}
+  width: 100%; }
+  .HomePageContent .HomeControl {
+    width: 100%;
+    height: 450px;
+    background: url("./../img/home-desktop-header.1b155c37.png") bottom/110% 110% no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .HomePageContent .HomeControl .HomeControl__board {
+      width: 700px;
+      display: flex;
+      background-color: #fff;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 5px; }
+      .HomePageContent .HomeControl .HomeControl__board .HomeIntroContainer {
+        color: #fff;
+        text-align: center;
+        width: 50%;
+        background: url("./../img/DAPP_Background-blue.06141c5d.png") bottom/cover no-repeat; }
+        .HomePageContent .HomeControl .HomeControl__board .HomeIntroContainer img {
+          width: 120px;
+          margin-top: 40px; }
+        .HomePageContent .HomeControl .HomeControl__board .HomeIntroContainer p.HomeIntroContainer_title {
+          font-size: 22px;
+          margin-top: 30px; }
+        .HomePageContent .HomeControl .HomeControl__board .HomeIntroContainer p.HomeIntroContainer_subtitle {
+          font-size: 16px;
+          font-weight: 300;
+          max-width: 220px;
+          margin: 20px auto 35px;
+          line-height: 20px; }
+      .HomePageContent .HomeControl .HomeControl__board .HomeSelectContainer {
+        width: 50%;
+        text-align: center; }
+        .HomePageContent .HomeControl .HomeControl__board .HomeSelectContainer p.HomeSelectContainer_title {
+          color: #00acc7;
+          font-size: 20px;
+          font-weight: 300;
+          margin-top: 78px; }
+        .HomePageContent .HomeControl .HomeControl__board .HomeSelectContainer .HomeSelectContainer_btnContainer button {
+          margin: 30px 15px 0; }
+
+.LatestLoanContainer {
+  width: 95%;
+  margin: 50px auto 0px; }
+  .LatestLoanContainer .LatestLoanHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .LatestLoanContainer .LatestLoanHeader .LatestLoanHeader__title {
+      font-size: 20px;
+      font-weight: 400;
+      color: #00acc7; }
+    .LatestLoanContainer .LatestLoanHeader .LatestLoanHeader__right {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .LatestLoanContainer .LatestLoanHeader .LatestLoanHeader__right .arrow-container {
+        margin-right: 15px; }
+        .LatestLoanContainer .LatestLoanHeader .LatestLoanHeader__right .arrow-container button {
+          margin: 0 3px; }
+        .LatestLoanContainer .LatestLoanHeader .LatestLoanHeader__right .arrow-container .swiper-button-next, .LatestLoanContainer .LatestLoanHeader .LatestLoanHeader__right .arrow-container .swiper-button-prev {
+          background-image: initial;
+          position: initial;
+          width: initial;
+          height: initial; }
+  .LatestLoanContainer .LatestLoanDevider {
+    background-color: #00acc7;
+    width: 100%;
+    height: 1px;
+    margin: 15px 0 25px; }
+
+.LatestLoanContainer:nth-child(3) {
+  margin-top: 30px;
+  margin-bottom: 50px; }

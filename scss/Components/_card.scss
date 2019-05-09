@@ -1,0 +1,113 @@
+.LoanInfoCard{
+    // width: $width-card !important;
+    height: $height-card !important;
+    position: relative;
+    background-image: linear-gradient(0deg, $color-blue-200, $color-blue-100);
+    box-shadow: 0 0 6px 1px rgba(0,0,0,.18);
+    cursor: pointer;
+    margin: 10px;
+    @include hoverEffect;
+    .LoanInfo__header{
+        background-color: $color-white;
+        display: flex;
+        .LoanInfo__Header-item{
+            width: 50%;
+            text-align: center;
+            margin: 10px 0 25px;
+            img{
+                @include setImgSize(30px, 30px);
+            }
+            p{
+                @include resetPdMg;
+                @include setFont($font-size-4, 600);
+                color: $color-gray;
+                margin-top: 5px;
+            }
+            p.loanamount-label{
+                @include setFont($font-size-2, 400);
+                color: $color-blue-100;
+                margin-top: 3px;
+            }
+        }
+        .LoanInfo__Header-item:first-child{
+            border-right: 1px solid $color-seperator;
+        }
+        
+    }
+    .OfferCard__header{
+        padding-top: 10px;
+        background-color: $color-white;
+        .OfferCard__tokens{
+            ul{
+                li{
+                    img{
+                        @include setImgSize(20px, 20px);
+                    }
+                }
+            }
+        }
+        .OfferCard__divider{
+            width: 100%;
+            height: 1px;
+            background-color: #f8f8f8;
+        }
+        .OfferCard__row{
+            padding: 5px 10px 8px 25px;
+            ul{
+                display: flex;
+                justify-content: flex-end;
+                li{
+                    width: (100%/6);
+                }
+            }
+        }
+        .OfferCard__info{
+            ul{
+                li{
+                    color:$color-gray;
+                    @include setFont($font-size-1, 400)
+                }
+                li:first-child{
+                    color: $color-blue-100;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    .LoanInfo__Body{
+        padding: 35px 30px 0 20px;
+        .LoanInfo__Detail-row{
+            color: $color-white;
+            @include displayFlex(space-between, center);
+            @include setFont($font-size-2, 300);
+            line-height: 20px;
+        }
+        
+    }
+    .OfferCard__body{
+        padding-top: 15px;
+        .OfferCard__action{
+            margin-top: 20px;
+            img{
+                @include setImgSize(30px, 30px);
+            }
+        }
+    }
+    .LoanInfo__Footer{
+        color: $color-white;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        .LoanInfo__Footer-text{
+            @include setFont($font-size-3, 300);
+            text-align: center;
+            line-height: 20px;
+        }
+    }
+    .waitingforpayback{
+        background: linear-gradient(#fc9b00,#e38b00);
+    }
+    .waitingforlender{
+        background: linear-gradient(#42db5f,#2dd74d);
+    }
+}
