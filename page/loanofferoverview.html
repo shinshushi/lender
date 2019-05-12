@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ETHLend</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- swiper library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <header class="Header">
+        <div class="Header__logo">
+            <img src="../img/logo_blue.4ab2b15e.png" alt="">
+        </div>
+        <nav class="Header__navbar">
+            <ul>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">New Loan Offer</a>
+                </li>
+                <li>
+                    <a href="#">New Loan Request</a>
+                </li>
+                <li>
+                    <a href="#">View All Offer</a>
+                </li>
+                <li>
+                    <a href="#">View All Request</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-caret-down"></i></a>
+                </li>
+                <li>
+                    <a href="#"><img src="../img/wallet-icon.png" alt="" style="width: 24px;"></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-user-circle"></i></a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="PanelContainer">
+        <div class="PanelContainer__mainBoard">
+            <div class="FundDetail__panel-left">
+                <h1 class="title">loan offer overview</h1>
+                <div class="address-container">
+                    <p class="label">Loan Offer</p>
+                    <p class="value">0x09ac2E8FC2A4cDa90b1019663939b5e3d314e029</p>
+                </div>
+                <div class="content">
+                    <div class="item">
+                        <span class="label">Maximum amount</span>
+                        <span class="value">4,000 USDC</span>
+                    </div>
+                    <div class="item">
+                        <span class="label">Minimum amount</span>
+                        <span class="value">500 USDC</span>
+                    </div>
+                    <div class="item">
+                        <span class="label">Duration</span>
+                        <span class="value">30 - 120 Days</span>
+                    </div>
+                </div>
+            </div>
+            <div class="FundDetail__panel-right">
+                <h2 class="FundDetail__panel-right__title">Choose the amount you want to borrow</h2>
+                <div class="FundDetail__panel-right__amountBox">
+                    <div class="FundDetail__etherAmount">
+                        <img src="../img/ether-icon.png" alt="">
+                        <span id="FundDetail__slider1-value">500</span>
+                    </div>
+                    <div class="FundDetail__slider">
+                        <input type="range" min="0" max="100" value="50" class="mySlider" id="FundDetail__slider1" data-max=100>
+                        <ul class="rangeslider__labels">
+                            <li class="rangeslider__label-item">500 USDC</li>
+                            <li class="rangeslider__label-item">4000 USDC</li>
+                        </ul>
+                    </div>
+                </div>
+                <h2 class="FundDetail__panel-right__title">Choose your collateral</h2>
+                <p class="FundDetail__panel-right__subtitle">Select the collateral you want to use for this loan amongst
+                    the allowed ones.</p>
+                <div class="FundDetailCollateralContainer">
+                    <div class="FundDetailCollateral">
+                        <div class="FundDetailCollateral__left">
+                            <img src="../img/icon-1.png" alt="">
+                            <span class="FundDetailCollateral__left-label">14.1578 ETH</span>
+                        </div>
+                        <div class="FundDetailCollateral__right">
+                            <span class="FundDetailCollateral__right-mpr">Tot. premium</span>
+                            <span class="FundDetailCollateral__right-mprValue">13.05 USDC</span>
+                        </div>
+                    </div>
+                    <div class="FundDetailCollateral">
+                        <div class="FundDetailCollateral__left">
+                            <img src="../img/icon-2.png" alt="">
+                            <span class="FundDetailCollateral__left-label">14.1578 ETH</span>
+                        </div>
+                        <div class="FundDetailCollateral__right">
+                            <span class="FundDetailCollateral__right-mpr">Tot. premium</span>
+                            <span class="FundDetailCollateral__right-mprValue">13.05 USDC</span>
+                        </div>
+                    </div>
+                    <div class="FundDetailCollateral">
+                        <div class="FundDetailCollateral__left">
+                            <img src="../img/icon-3.png" alt="">
+                            <span class="FundDetailCollateral__left-label">14.1578 ETH</span>
+                        </div>
+                        <div class="FundDetailCollateral__right">
+                            <span class="FundDetailCollateral__right-mpr">Tot. premium</span>
+                            <span class="FundDetailCollateral__right-mprValue">13.05 USDC</span>
+                        </div>
+                    </div>
+                    <div class="FundDetailCollateral">
+                        <div class="FundDetailCollateral__left">
+                            <img src="../img/icon-4.png" alt="">
+                            <span class="FundDetailCollateral__left-label">14.1578 ETH</span>
+                        </div>
+                        <div class="FundDetailCollateral__right">
+                            <span class="FundDetailCollateral__right-mpr">Tot. premium</span>
+                            <span class="FundDetailCollateral__right-mprValue">13.05 USDC</span>
+                        </div>
+                    </div>
+                    <div class="FundDetailCollateral">
+                        <div class="FundDetailCollateral__left">
+                            <img src="../img/icon-5.png" alt="">
+                            <span class="FundDetailCollateral__left-label">14.1578 ETH</span>
+                        </div>
+                        <div class="FundDetailCollateral__right">
+                            <span class="FundDetailCollateral__right-mpr">Tot. premium</span>
+                            <span class="FundDetailCollateral__right-mprValue">13.05 USDC</span>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="FundDetail__panel-right__title">Choose the duration of your loan</h2>
+                <div class="FundDetail__slider">
+                    <input type="range" min="1" max="4" value="50" class="mySlider">
+                    <ul class="rangeslider__labels">
+                        <li class="rangeslider__label-item">30 Days</li>
+                        <li class="rangeslider__label-item">120 Days</li>
+                    </ul>
+                </div>
+                <button class="btn btn_select">take this loan</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slider = document.getElementById("FundDetail__slider1");
+        var output = document.getElementById("FundDetail__slider1-value");
+        output.innerHTML = 500 + 35*slider.value;
+        slider.oninput = function(){
+            output.innerHTML = 500 + 35*slider.value;
+        }
+        var sliders = document.getElementsByClassName("mySlider::after");
+        console.log(sliders);
+    </script>
+</body>
+
+</html>

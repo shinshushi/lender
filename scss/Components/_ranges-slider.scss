@@ -1,0 +1,76 @@
+@function makelongshadow($color, $size) {
+    $val: 5px 0 0 $size $color;
+    
+    @for $i from 6 through 320 {
+      $val: #{$val}, #{$i}px 0 0 $size #{$color};
+    }
+    
+    @return $val;
+  }
+
+.FundDetail__slider{
+    width: 100%;
+    margin-top: 10px;
+    
+    .rangeslider__labels{
+        font-size: 12px;
+        color: $color-gray;
+        @include displayFlex(space-between, center);
+        margin-top: 5px;
+    }
+}
+
+.mySlider{
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+    position: relative;
+    &:focus{
+        outline: none;
+    }
+    &::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        @include styleForInputThumb;
+       
+    }
+    &::-moz-range-thumb{
+        @include styleForInputThumb(-2);
+    }
+    &::-ms-thumb{
+        @include styleForInputThumb(-2);
+        margin-top: 2px;
+    }
+    &::-ms-track{
+        width: 100%;
+        cursor: pointer;
+        /* Hides the slider so custom styles can be added */
+        background: transparent; 
+        border-color: transparent;
+        color: transparent;
+        border-width: 18px 0;
+        height: 4px;
+    }
+    
+    &::-ms-fill-lower {
+        background-color: $color-blue-100;
+        border-radius: 50px;
+        border: 1px solid $color-blue-100;
+    }
+    &::-ms-fill-upper {
+        background-color: $color-white;
+        border-radius: 50px; 
+        border: 1px solid $color-blue-100;
+    }
+    &::-webkit-slider-runnable-track{
+        @include styleForInputTrack;
+    }
+    &::-moz-range-track{
+        @include styleForInputTrack;
+        height: 2px;
+    }
+    &::-moz-range-progress{
+        border: 1px solid $color-blue-100;
+        background-color: $color-blue-100;
+    }
+}
+

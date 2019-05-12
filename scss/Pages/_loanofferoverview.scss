@@ -1,0 +1,121 @@
+.PanelContainer{
+    background: url('./../img/DAPP_Background-blue.06141c5d.png') center/cover no-repeat;
+    text-align: center;
+    @include setImgSize(100%, 100%);
+    @include displayFlex(center, center);
+    .PanelContainer__mainBoard{
+        @include displayFlex(between, center);
+        @include setImgSize(1000px, 550px);
+        background-color: $color-white;
+        border-radius: 5px;
+        box-shadow: 0 0 20px 0 rgba(0,0,0,.3);
+        .FundDetail__panel-left{
+            @include setImgSize(50%, 100%);
+            background: $color-blue-100 url('./../img/blue-mountain.0328d1d5.png') 0/cover no-repeat;
+            color: $color-white;
+            padding: 35px 75px 0;
+            .title{
+                @include setFont(24px, 800);
+                text-transform: uppercase;
+                padding-bottom: 30px;
+            }
+            .address-container{
+                line-height: 20px;
+                .label{
+                    @include setFont($font-size-4, 300);
+                }
+                .value{
+                    @include setFont($font-size-4, 600);
+                }
+            }
+            .content{
+                .item{
+                    @include displayFlex(space-between, center);
+                    @include setFont($font-size-5, 300);
+                    padding: 30px 15px 0;
+                    .value{
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        .FundDetail__panel-right{
+            @include setImgSize(50%, 100%);
+            padding: 30px;
+            .FundDetail__panel-right__title{
+                @include setFontWithColor($font-size-6, 300, $color-blue-100);
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.21;
+                letter-spacing: normal;
+                text-align: left;
+                margin-top: 20px;
+            }
+            .FundDetail__panel-right__title:first-child{
+                margin-top: 0;
+            }
+            .FundDetail__panel-right__subtitle{
+                @include setFontWithColor($font-size-4, 300, $color-gray);
+                text-align: left;
+                margin-top: 8px;
+            }
+            .FundDetail__panel-right__amountBox{
+                @include displayFlex(space-between, center);
+                .FundDetail__etherAmount{
+                    padding: 3px 10px;
+                    border: 1px solid $color-blue-100;
+                    border-radius: 2px;
+                    margin-top: 10px;
+                    margin-right: 20px;
+                    display: table;
+                    min-width: 100px;
+                    img{
+                        @include setImgSize(25px, 25px);
+                    }
+                    span{
+                        font-size: 14px;
+                        color: $color-gray;
+                        vertical-align: middle;
+                    }
+                }
+            }
+            .FundDetailCollateralContainer{
+                .FundDetailCollateral{
+                    @include displayFlex(space-between, center);
+                    height: 30px;
+                    border: 1px solid #ebebf2;
+                    border-radius: 2px;
+                    margin-top: 8px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    cursor: pointer;
+                    span{
+                        margin-left: 10px;
+                    }
+                    .FundDetailCollateral__left{
+                        img{
+                            @include setImgSize(20px, 20px);
+                        }
+                        .FundDetailCollateral__left-label{
+                            @include setFontWithColor($font-size-4, 400, $color-gray);
+                            text-transform: uppercase;
+                        }
+                    }
+                    .FundDetailCollateral__right{
+                        .FundDetailCollateral__right-mpr{
+                            @include setFontWithColor($font-size-4, 500, $color-blue-100);
+                        }
+                        .FundDetailCollateral__right-mprValue{
+                            @include setFontWithColor($font-size-4, 400, $color-gray);
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+            button.btn{
+                font-size: $font-size-2;
+                width: 160px;
+            }
+        }
+    }
+}

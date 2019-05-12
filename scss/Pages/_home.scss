@@ -1,6 +1,8 @@
 .HomePageContent{
     background-color: $color-white;
     width: 100%;
+    position: relative;
+    top: 50px;
     .HomeControl{
         width: 100%;
         height: 450px;

@@ -2,17 +2,19 @@ html {
   font-family: 'Lato', sans-serif;
   font-size: 16px; }
 
-body {
+h1, h2, h3, h4, h5, h6, p, span, ul, li, a, div, section, body, img {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
-h1, h2, h3, h4, h5, h6, p, span, ul, li, a, div, section {
-  margin: 0;
-  padding: 0; }
-
 ul {
   list-style: none; }
+
+body, html {
+  height: 100%; }
+
+img {
+  vertical-align: middle; }
 
 .btn {
   font-size: 10px;
@@ -134,6 +136,84 @@ ul {
   .LoanInfoCard .waitingforlender {
     background: linear-gradient(#42db5f, #2dd74d); }
 
+.FundDetail__slider {
+  width: 100%;
+  margin-top: 10px; }
+  .FundDetail__slider .rangeslider__labels {
+    font-size: 12px;
+    color: #707070;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px; }
+
+.mySlider {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+  position: relative; }
+  .mySlider:focus {
+    outline: none; }
+  .mySlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #00acc7;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: #00acc7;
+    cursor: pointer;
+    margin-top: -9px; }
+  .mySlider::-moz-range-thumb {
+    border: 1px solid #00acc7;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #00acc7;
+    cursor: pointer;
+    margin-top: -9px; }
+  .mySlider::-ms-thumb {
+    border: 1px solid #00acc7;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #00acc7;
+    cursor: pointer;
+    margin-top: -9px;
+    margin-top: 2px; }
+  .mySlider::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+    border-width: 18px 0;
+    height: 4px; }
+  .mySlider::-ms-fill-lower {
+    background-color: #00acc7;
+    border-radius: 50px;
+    border: 1px solid #00acc7; }
+  .mySlider::-ms-fill-upper {
+    background-color: #fff;
+    border-radius: 50px;
+    border: 1px solid #00acc7; }
+  .mySlider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    border: 1px solid #00acc7;
+    background-color: #fff;
+    border-radius: 50px; }
+  .mySlider::-moz-range-track {
+    width: 100%;
+    height: 4px;
+    border: 1px solid #00acc7;
+    background-color: #fff;
+    border-radius: 50px;
+    height: 2px; }
+  .mySlider::-moz-range-progress {
+    border: 1px solid #00acc7;
+    background-color: #00acc7; }
+
 .Header {
   background-color: #fff;
   display: flex;
@@ -173,7 +253,9 @@ ul {
 
 .HomePageContent {
   background-color: #fff;
-  width: 100%; }
+  width: 100%;
+  position: relative;
+  top: 50px; }
   .HomePageContent .HomeControl {
     width: 100%;
     height: 450px;
@@ -248,3 +330,123 @@ ul {
 .LatestLoanContainer:nth-child(3) {
   margin-top: 30px;
   margin-bottom: 50px; }
+
+.PanelContainer {
+  background: url("./../img/DAPP_Background-blue.06141c5d.png") center/cover no-repeat;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .PanelContainer .PanelContainer__mainBoard {
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    width: 1000px;
+    height: 550px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3); }
+    .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-left {
+      width: 50%;
+      height: 100%;
+      background: #00acc7 url("./../img/blue-mountain.0328d1d5.png") 0/cover no-repeat;
+      color: #fff;
+      padding: 35px 75px 0; }
+      .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-left .title {
+        font-size: 24px;
+        font-weight: 800;
+        text-transform: uppercase;
+        padding-bottom: 30px; }
+      .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-left .address-container {
+        line-height: 20px; }
+        .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-left .address-container .label {
+          font-size: 14px;
+          font-weight: 300; }
+        .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-left .address-container .value {
+          font-size: 14px;
+          font-weight: 600; }
+      .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-left .content .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 300;
+        padding: 30px 15px 0; }
+        .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-left .content .item .value {
+          font-weight: 600; }
+    .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-right {
+      width: 50%;
+      height: 100%;
+      padding: 30px; }
+      .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-right .FundDetail__panel-right__title {
+        font-size: 20px;
+        font-weight: 300;
+        color: #00acc7;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.21;
+        letter-spacing: normal;
+        text-align: left;
+        margin-top: 20px; }
+      .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-right .FundDetail__panel-right__title:first-child {
+        margin-top: 0; }
+      .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-right .FundDetail__panel-right__subtitle {
+        font-size: 14px;
+        font-weight: 300;
+        color: #707070;
+        text-align: left;
+        margin-top: 8px; }
+      .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-right .FundDetail__panel-right__amountBox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-right .FundDetail__panel-right__amountBox .FundDetail__etherAmount {
+          padding: 3px 10px;
+          border: 1px solid #00acc7;
+          border-radius: 2px;
+          margin-top: 10px;
+          margin-right: 20px;
+          display: table;
+          min-width: 100px; }
+          .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-right .FundDetail__panel-right__amountBox .FundDetail__etherAmount img {
+            width: 25px;
+            height: 25px; }
+          .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-right .FundDetail__panel-right__amountBox .FundDetail__etherAmount span {
+            font-size: 14px;
+            color: #707070;
+            vertical-align: middle; }
+      .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-right .FundDetailCollateralContainer .FundDetailCollateral {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 30px;
+        border: 1px solid #ebebf2;
+        border-radius: 2px;
+        margin-top: 8px;
+        padding-left: 10px;
+        padding-right: 10px;
+        cursor: pointer; }
+        .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-right .FundDetailCollateralContainer .FundDetailCollateral span {
+          margin-left: 10px; }
+        .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-right .FundDetailCollateralContainer .FundDetailCollateral .FundDetailCollateral__left img {
+          width: 20px;
+          height: 20px; }
+        .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-right .FundDetailCollateralContainer .FundDetailCollateral .FundDetailCollateral__left .FundDetailCollateral__left-label {
+          font-size: 14px;
+          font-weight: 400;
+          color: #707070;
+          text-transform: uppercase; }
+        .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-right .FundDetailCollateralContainer .FundDetailCollateral .FundDetailCollateral__right .FundDetailCollateral__right-mpr {
+          font-size: 14px;
+          font-weight: 500;
+          color: #00acc7; }
+        .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-right .FundDetailCollateralContainer .FundDetailCollateral .FundDetailCollateral__right .FundDetailCollateral__right-mprValue {
+          font-size: 14px;
+          font-weight: 400;
+          color: #707070;
+          text-transform: uppercase; }
+      .PanelContainer .PanelContainer__mainBoard .FundDetail__panel-right button.btn {
+        font-size: 12px;
+        width: 160px; }
